@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="crm_lead_admin_sbu_rule" model="ir.rule">
+        <field name="name">Crm.lead: Manager SBU lead</field>
+        <field name="model_id" ref="model_crm_lead"/>
+        <field name="domain_force">[
+            ('user_id.company_id', 'in', user.company_ids.ids)
+            ]
+        </field>
+        <field name="groups" eval="[(4, ref('group_sbu_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+    <record id="crm_lead_multi_rule" model="ir.rule">
+        <field name="name">Crm.lead: multi company rule</field>
+        <field name="model_id" ref="model_crm_lead"/>
+        <field name="domain_force">[
+            ('message_is_follower', '=', True)
+            ]
+        </field>
+        <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman')), (4, ref('group_sbu_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="crm_partner_sbu_rule" model="ir.rule">
+        <field name="name">Res.partner: User SBU partner</field>
+        <field name="model_id" ref="model_res_partner"/>
+        <field name="domain_force">[
+            '|',
+            ('user_id', '=', user.id),
+            ('user_id', '=', False)
+            ]
+        </field>
+        <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+    <record id="crm_partner_admin_sbu_rule" model="ir.rule">
+        <field name="name">Res.partner: Manager SBU partner</field>
+        <field name="model_id" ref="model_res_partner"/>
+        <field name="domain_force">[
+            '|', ('partner_share', '=', False),
+            ('user_id.company_id', 'in', user.company_ids.ids + [False])
+            ]
+        </field>
+        <field name="groups" eval="[(4, ref('group_sbu_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+    <record id="crm_partner_multi_rule" model="ir.rule">
+        <field name="name">Res.partner: multi company rule</field>
+        <field name="model_id" ref="model_res_partner"/>
+        <field name="domain_force">[
+            '|', ('partner_share', '=', False),
+            ('message_is_follower', '=', True)
+            ]
+        </field>
+        <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman')), (4, ref('group_sbu_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="sale_order_manager_sbu_rule" model="ir.rule">
+        <field name="name">Sale.order: Manager SBU rule</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="domain_force">[
+            ('user_id.company_id', 'in', user.company_ids.ids)
+            ]
+        </field>
+        <field name="groups" eval="[(4, ref('group_sbu_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+    <record id="sale_order_multi_rule" model="ir.rule">
+        <field name="name">Sale.order: multi company rule</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="domain_force">[
+            ('message_is_follower', '=', True),
+            ]
+        </field>
+        <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman')), (4, ref('group_sbu_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+</odoo>

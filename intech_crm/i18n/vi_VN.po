@@ -1,0 +1,291 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* intech_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240330\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-23 03:23+0000\n"
+"PO-Revision-Date: 2024-12-23 03:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: intech_crm
+#. odoo-javascript
+#: code:addons/intech-erp/intech_crm/static/src/views/fields/x2many_field.js:0
+#: code:addons/intech_crm/static/src/views/fields/x2many_field.js:0
+#, python-format
+msgid "Add: %s"
+msgstr "Thêm: %s"
+
+#. module: intech_crm
+#. odoo-javascript
+#: code:addons/intech-erp/intech_crm/static/src/views/fields/relational_utils.xml:0
+#: code:addons/intech_crm/static/src/views/fields/relational_utils.xml:0
+#, python-format
+msgid "Archive"
+msgstr "Lưu trữ"
+
+#. module: intech_crm
+#: model:ir.actions.act_window,name:intech_crm.crm_data_act_window
+#: model:ir.model,name:intech_crm.model_crm_data
+msgid "CRM Data"
+msgstr "Nhóm - Nguồn - Mối quan hệ"
+
+#. module: intech_crm
+#. odoo-python
+#: code:addons/intech-erp/intech_crm/models/res_partner.py:0
+#: code:addons/intech_crm/models/res_partner.py:0
+#, python-format
+msgid "Cannot find 'sequence.code.partner' sequence to update."
+msgstr "Không thể tìm thấy 'sequence.code.partner' để cập nhật."
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_lead__code_partner
+#: model:ir.model.fields,field_description:intech_crm.field_res_partner__code_partner
+#: model:ir.model.fields,field_description:intech_crm.field_res_users__code_partner
+msgid "Code Partner"
+msgstr "Mã khách hàng"
+
+#. module: intech_crm
+#: model_terms:ir.ui.view,arch_db:intech_crm.view_partner_form_inherit
+msgid "Code Partner:"
+msgstr "Mã khách hàng:"
+
+#. module: intech_crm
+#: model_terms:ir.ui.view,arch_db:intech_crm.view_partner_kanban_inherit
+msgid "Code:"
+msgstr "Mã:"
+
+#. module: intech_crm
+#: model:ir.model,name:intech_crm.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cài đặt cấu hình"
+
+#. module: intech_crm
+#: model:ir.model,name:intech_crm.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_lead__contact_email
+msgid "Contact Email"
+msgstr "Email liên hệ"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_lead__contact_person_id
+msgid "Contact Person"
+msgstr "Nguời liên hệ"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_lead__contact_phone
+msgid "Contact Phone"
+msgstr "Điện thoại liên hệ"
+
+#. module: intech_crm
+#: model:ir.ui.menu,name:intech_crm.crm_menu_contact_tags
+msgid "Contact Tags"
+msgstr "Thẻ liên hệ"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_lead__date_create
+#: model:ir.model.fields,field_description:intech_crm.field_res_partner__create_date_intech
+#: model:ir.model.fields,field_description:intech_crm.field_res_users__create_date_intech
+msgid "Create Date"
+msgstr "Ngày tạo"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_data__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_data__create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: intech_crm
+#: model_terms:ir.ui.view,arch_db:intech_crm.crm_data_view_form
+#: model_terms:ir.ui.view,arch_db:intech_crm.crm_data_view_tree
+msgid "Data"
+msgstr "Dữ liệu"
+
+#. module: intech_crm
+#: model:ir.ui.menu,name:intech_crm.crm_data_config
+msgid "Data Partner"
+msgstr "Nhóm - Nguồn - Mối quan hệ"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_data__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: intech_crm
+#: model_terms:ir.ui.view,arch_db:intech_crm.crm_data_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_res_partner__group_id
+#: model:ir.model.fields,field_description:intech_crm.field_res_users__group_id
+#: model:ir.model.fields.selection,name:intech_crm.selection__crm_data__type__group
+msgid "Group Partner"
+msgstr "Nhóm khách hàng"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_data__id
+msgid "ID"
+msgstr ""
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_lead__is_partner_person
+msgid "Is Partner Person"
+msgstr "Là khách hàng"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_data__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhập lần cuối bởi"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_data__write_date
+msgid "Last Updated on"
+msgstr "Lần cập nhật cuối vào"
+
+#. module: intech_crm
+#: model:ir.model,name:intech_crm.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Khách hàng tiềm năng/Cơ hội"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_data__name
+#: model_terms:ir.ui.view,arch_db:intech_crm.crm_data_view_search
+msgid "Name"
+msgstr "Tên"
+
+#. module: intech_crm
+#: model:ir.model.constraint,message:intech_crm.constraint_crm_data_name_uniq
+msgid "Name and Type already exists !"
+msgstr "Tên và loại đã tồn tại!"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_lead__name
+msgid "Opportunity"
+msgstr "Cơ hội"
+
+#. module: intech_crm
+#. odoo-python
+#: code:addons/intech-erp/intech_crm/controllers/contact_intech.py:0
+#: code:addons/intech_crm/controllers/contact_intech.py:0
+#, python-format
+msgid "Opportunity %s created successfully!, %s"
+msgstr "Cơ hội %s tạo thành công!, %s"
+
+#. module: intech_crm
+#. odoo-python
+#: code:addons/intech-erp/intech_crm/controllers/contact_intech.py:0
+#: code:addons/intech_crm/controllers/contact_intech.py:0
+#, python-format
+msgid "Partner %s created successfully!"
+msgstr "Khách hàng %s tạo thành công!"
+
+#. module: intech_crm
+#. odoo-python
+#: code:addons/intech-erp/intech_crm/controllers/contact_intech.py:0
+#: code:addons/intech_crm/controllers/contact_intech.py:0
+#, python-format
+msgid "Partner %s updated successfully!"
+msgstr "Khách hàng %s cập nhật thành công!"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_lead__product_category_id
+msgid "Product Category"
+msgstr "Danh mục sản phẩm"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_res_partner__partner_state_id
+#: model:ir.model.fields,field_description:intech_crm.field_res_users__partner_state_id
+#: model:ir.model.fields.selection,name:intech_crm.selection__crm_data__type__relation
+msgid "Relation"
+msgstr "Mối quan hệ"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_lead__source_partner
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_res_partner__source_id
+#: model:ir.model.fields,field_description:intech_crm.field_res_users__source_id
+#: model:ir.model.fields.selection,name:intech_crm.selection__crm_data__type__source
+msgid "Source Partner"
+msgstr "Nguồn khách hàng"
+
+#. module: intech_crm
+#: model:ir.model.constraint,message:intech_crm.constraint_res_partner_unique_code_partner
+msgid "The code partner must be unique."
+msgstr "Mã khách hàng phải là duy nhất."
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_crm_data__type
+#: model_terms:ir.ui.view,arch_db:intech_crm.crm_data_view_search
+msgid "Type"
+msgstr "Loại"
+
+#. module: intech_crm
+#: model_terms:ir.ui.view,arch_db:intech_crm.view_partner_form_inherit
+msgid "e.g. KH00001"
+msgstr "ví dụ KH00001"
+
+#. module: intech_crm
+#: model:res.groups,name:intech_crm.group_sbu_manager
+msgid "SBU Manager"
+msgstr "Trưởng SBU"
+
+#. module: intech_crm
+#: model:res.groups,comment:intech_crm.group_sbu_manager
+msgid "Group for SBU managers with special access rights."
+msgstr "Nhóm dành cho người quản lý SBU có quyền truy cập đặc biệt."
+
+#. module: crm
+#: model:ir.ui.menu,name:crm.menu_crm_opportunities
+#: model_terms:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
+#: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "My Pipeline"
+msgstr "Cơ hội của tôi"
+
+#. module: crm
+#. odoo-python
+#: code:addons/crm/models/crm_team.py:0
+#: model:ir.actions.act_window,name:crm.crm_lead_action_pipeline
+#: model:ir.model.fields,field_description:crm.field_crm_team__use_opportunities
+#: model:ir.ui.menu,name:crm.crm_opportunity_report_menu
+#: model:ir.ui.menu,name:crm.menu_crm_config_lead
+#, python-format
+msgid "Pipeline"
+msgstr "Cơ hội"
+
+#. module: crm
+#: model:ir.model.fields,field_description:crm.field_calendar_event__opportunity_id
+#: model:ir.model.fields,field_description:crm.field_crm_activity_report__lead_id
+#: model:ir.model.fields,field_description:crm.field_crm_lead__name
+#: model:ir.model.fields,field_description:crm.field_res_partner__opportunity_count
+#: model:ir.model.fields,field_description:crm.field_res_users__opportunity_count
+#: model:ir.model.fields.selection,name:crm.selection__crm_activity_report__lead_type__opportunity
+#: model:ir.model.fields.selection,name:crm.selection__crm_lead__type__opportunity
+#: model_terms:ir.ui.view,arch_db:crm.crm_activity_report_view_search
+#: model_terms:ir.ui.view,arch_db:crm.crm_case_tree_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm.crm_team_view_kanban_dashboard
+#: model_terms:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Opportunity"
+msgstr "Cơ hội"
+
+#. module: crm
+#: model:ir.actions.server,name:crm.action_your_pipeline
+msgid "Crm: My Pipeline"
+msgstr "Crm: Cơ hội"

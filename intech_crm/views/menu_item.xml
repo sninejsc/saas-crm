@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="crm_data_config"
+              name="Data Partner"
+              parent="crm.crm_menu_config"
+              action="crm_data_act_window"
+              sequence="0"/>
+
+    <menuitem id="crm_menu_contact_tags"
+              name="Contact Tags"
+              parent="crm.crm_menu_config"
+              action="base.action_partner_category_form"
+              sequence="5"/>
+</odoo>

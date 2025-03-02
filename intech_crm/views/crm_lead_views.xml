@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="quick_create_opportunity_form_inherit" model="ir.ui.view">
+        <field name="name">quick.create.opportunity.form.inherit</field>
+        <field name="inherit_id" ref="crm.quick_create_opportunity_form"/>
+        <field name="model">crm.lead</field>
+        <field name="arch" type="xml">
+            <xpath expr="//form//field[@name='phone']" position="after">
+                <field name="user_id"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_lead_view_form_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.view.form.inherit</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="model">crm.lead</field>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group/group[2]/field[@name='partner_id']" position="before">
+                <field name="code_partner"/>
+            </xpath>
+            <xpath expr="//form/sheet/group/group/field[@name='user_id']" position="before">
+                <field name="date_create"/>
+            </xpath>
+            <xpath expr="//form/sheet/group/group/field[@name='tag_ids']" position="after">
+                <field name="product_category_id" options="{'no_create': True, 'no_edit': True}"/>
+            </xpath>
+            <xpath expr="//form/sheet/group/group/div[hasclass('o_row_readonly')][2]" position="after">
+                <field name="is_partner_person" invisible="1"/>
+                <field name="contact_person_id" domain="[('type', '=', 'contact'),('parent_id', '=', partner_id)]" invisible="is_partner_person" options="{'no_create': True, 'no_edit': True}"/>
+                <field name="contact_phone" invisible="is_partner_person"/>
+                <field name="contact_email" invisible="is_partner_person"/>
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page[@name='lead']/group/group/field[@name='source_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page[@name='lead']/group/group/field[@name='source_id']" position="after">
+                <field name="source_partner"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

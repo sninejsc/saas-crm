@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_data_manager,crm_data_manager,model_crm_data,sales_team.group_sale_manager,1,1,1,1
+access_crm_data_user,crm_data_user,model_crm_data,base.group_user,1,0,0,0
+access_crm_lead,crm.lead,model_crm_lead,sales_team.group_sale_salesman,1,1,1,1
+access_res_partner_sale_manager,res.partner.sale.manager,base.model_res_partner,sales_team.group_sale_manager,1,1,1,1
+access_sale_order,sale.order,sale.model_sale_order,sales_team.group_sale_salesman,1,1,1,1
+
+access_crm_lead_manager_sbu,crm_lead_manager_sbu,crm.model_crm_lead,group_sbu_manager,1,1,1,1
+access_res_partner_manager_sbu,res_partner_manager_sbu,base.model_res_partner,group_sbu_manager,1,1,1,1
+access_sale_order_manager_sbu,sale_order_manager_sbu,sale.model_sale_order,group_sbu_manager,1,1,1,1
+access_crm_team_manager_sbu,crm_team_manager_sbu,sale.model_crm_team,group_sbu_manager,1,1,1,1
+access_crm_data_manager_sbu,crm_data_manager_sbu,model_crm_data,group_sbu_manager,1,1,1,1

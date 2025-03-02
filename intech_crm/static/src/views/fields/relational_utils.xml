@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <t t-name="web.X2ManyFieldDialog.inherit" t-inherit="web.X2ManyFieldDialog"
+       t-inherit-mode="extension">
+        <xpath expr="//t[@t-else='']/button[contains(@class, 'btn btn-primary o_form_button_save')]" position="after">
+            <button class="btn btn-secondary o_btn_archive" t-on-click="archive" data-hotkey="v">
+                <t>Archive</t>
+            </button>
+        </xpath>
+    </t>
+</templates>

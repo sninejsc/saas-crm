@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="group_sbu_manager" model="res.groups">
+        <field name="name">SBU Manager</field>
+        <field name="category_id" ref="base.module_category_sales_sales"/>
+        <field name="implied_ids" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+        <field name="comment">Group for SBU managers with special access rights.</field>
+    </record>
+
+    <record id="sales_team.group_sale_salesman_all_leads" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_sbu_manager'))]"/>
+    </record>
+
+    <record id="crm.sales_team_menu_team_pipeline" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('group_sbu_manager'))]"/>
+    </record>
+
+    <record id="crm.crm_menu_config" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('group_sbu_manager'))]"/>
+    </record>
+
+    <record id="sale.report_sales_team" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('group_sbu_manager'))]"/>
+    </record>
+
+    <record id="sale.menu_sale_config" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('group_sbu_manager'))]"/>
+    </record>
+</odoo>

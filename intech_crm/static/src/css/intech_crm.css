@@ -1,0 +1,17 @@
+.o_partner_code {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 0 5px 10px;
+    border-color: 1px solid var(--biz-theme-primary-color);
+    line-height: 1.8;
+}
+
+th[data-name="acc_number"],
+th[data-name="bank_id"] {
+    width: 33% !important;
+}
+
+th[data-name="allow_out_payment"] {
+    width: 30% !important;
+    min-width: 10%  !important;
+}

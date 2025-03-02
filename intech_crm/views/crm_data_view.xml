@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="crm_data_view_form" model="ir.ui.view">
+            <field name="name">crm_data_view_form</field>
+            <field name="model">crm.data</field>
+            <field name="arch" type="xml">
+                <form string="Data">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="type"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="crm_data_view_search" model="ir.ui.view">
+            <field name="name">crm.data.view.search</field>
+            <field name="model">crm.data</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field string="Name" name="name"/>
+                    <group expand="1" string="Group By">
+                        <filter string="Type" name="type" context="{'group_by': 'type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="crm_data_view_tree" model="ir.ui.view">
+            <field name="name">crm_data_view_tree</field>
+            <field name="model">crm.data</field>
+            <field name="arch" type="xml">
+                <tree string="Data">
+                    <field name="name" required="1"/>
+                    <field name="type" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="crm_data_act_window" model="ir.actions.act_window">
+            <field name="name">CRM Data</field>
+            <field name="res_model">crm.data</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="crm_data_view_tree"/>
+            <field name="search_view_id" ref="crm_data_view_search"/>
+            <field name="context">{'search_default_type': 1}</field>
+        </record>
+
+    </data>
+</odoo>

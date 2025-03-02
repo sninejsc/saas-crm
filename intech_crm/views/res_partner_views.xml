@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group/group/field[@name='vat']" position="after">
+                <field name="group_id"/>
+                <field name="source_id"/>
+                <field name="partner_state_id"/>
+                <field name="create_date_intech"/>
+            </xpath>
+            <xpath expr="//form/sheet/group/group/span[@name='address_name']/b" position="attributes">
+                <attribute name="invisible">False</attribute>
+            </xpath>
+            <xpath expr="//div[@name='div_address']//field[@name='street']" position="attributes">
+                <attribute name="required">type!='contact' and not street2 and not city and not state_id and not zip and not country_id</attribute>
+            </xpath>
+            <xpath expr="//div[@name='div_address']//field[@name='street2']" position="attributes">
+                <attribute name="required">type!='contact' and not street and not city and not state_id and not zip and not country_id</attribute>
+            </xpath>
+            <xpath expr="//div[@name='div_address']//field[@name='city']" position="attributes">
+                <attribute name="required">type!='contact' and not street2 and not street and not state_id and not zip and not country_id</attribute>
+            </xpath>
+            <xpath expr="//div[@name='div_address']//field[@name='state_id']" position="attributes">
+                <attribute name="required">type!='contact' and not street2 and not street and not city and not zip and not country_id</attribute>
+            </xpath>
+            <xpath expr="//div[@name='div_address']//field[@name='zip']" position="attributes">
+                <attribute name="required">type!='contact' and not street2 and not street and not city and not state_id and not country_id</attribute>
+            </xpath>
+            <xpath expr="//div[@name='div_address']//field[@name='country_id']" position="attributes">
+                <attribute name="required">type!='contact' and not street2 and not street and not city and not state_id and not zip</attribute>
+            </xpath>
+
+            <xpath expr="//form/sheet/div[@class='oe_title mb24']/field[@name='company_type']"
+                   position="after">
+                <div class="o_row">
+                    Code Partner: <field name="code_partner" placeholder="e.g. KH00001" class="o_partner_code"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter_inherit" model="ir.ui.view">
+        <field name="name">res.partner.filter.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="code_partner"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_tree_inherit" model="ir.ui.view">
+        <field name="name">res.partner.tree.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree//field[@name='display_name']" position="before">
+                <field name="code_partner"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_kanban_inherit" model="ir.ui.view">
+        <field name="name">res.partner.kanban.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//li[3]" position="after">
+                <li t-if="record.code_partner">Code: <field name="code_partner"/></li>
+            </xpath>
+        </field>
+    </record>
+</odoo>
