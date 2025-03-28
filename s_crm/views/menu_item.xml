@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <menuitem action="base.action_res_groups" id="base.menu_action_res_groups" parent="base.menu_users" groups="base.group_system" sequence="3"/>
     <menuitem id="crm_data_config"
               name="Data Partner"
               parent="crm.crm_menu_config"

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Intech CRM",
+    'name': "S-CRM",
     'author': 'SNine',
     'company': 'SNine',
     'maintainer': 'SNine',
     'website': "https://www.snine.vn",
     'category': 'CRM',
     'version': '0.1',
-    'depends': ['base', 'crm', 'sale', 'sales_team'],
+    'depends': ['base', 'crm', 'sale', 'sales_team', 'mail'],
     'data': [
         'security/crm_security.xml',
         'security/rule_crm.xml',
@@ -28,6 +28,7 @@
             'intech_crm/static/src/views/**/*.js',
         ],
     },
+    "price": 5,
     "installable": True,
     'application': True,
     'license': 'LGPL-3',

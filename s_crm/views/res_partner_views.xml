@@ -15,6 +15,9 @@
             <xpath expr="//form/sheet/group/group/span[@name='address_name']/b" position="attributes">
                 <attribute name="invisible">False</attribute>
             </xpath>
+            <xpath expr="//form/sheet/notebook/page/field[@name='child_ids']" position="attributes">
+                <attribute name="context">{'default_parent_id': id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_lang': lang, 'default_user_id': user_id, 'default_type': 'contact'}</attribute>
+            </xpath>
             <xpath expr="//div[@name='div_address']//field[@name='street']" position="attributes">
                 <attribute name="required">type!='contact' and not street2 and not city and not state_id and not zip and not country_id</attribute>
             </xpath>
@@ -74,5 +77,16 @@
                 <li t-if="record.code_partner">Code: <field name="code_partner"/></li>
             </xpath>
         </field>
+    </record>
+
+    <record id="res_partner_view_form_mail_inherit" model="ir.ui.view">
+            <field name="name">res.partner.view.form.mail.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="mail.res_partner_view_form_inherit_mail"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div/field[@name='email']" position="replace">
+                    <field name="email"/>
+                </xpath>
+            </field>
     </record>
 </odoo>

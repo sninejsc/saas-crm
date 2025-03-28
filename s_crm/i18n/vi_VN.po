@@ -289,3 +289,9 @@ msgstr "Cơ hội"
 #: model:ir.actions.server,name:crm.action_your_pipeline
 msgid "Crm: My Pipeline"
 msgstr "Crm: Cơ hội"
+
+#. module: intech_crm
+#: model:ir.model.fields,field_description:intech_crm.field_res_partner__phone
+#: model:ir.model.fields,field_description:intech_crm.field_res_users__phone
+msgid "Phone"
+msgstr "Điện thoại"

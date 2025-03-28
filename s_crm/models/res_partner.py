@@ -13,6 +13,7 @@ class ResPartner(models.Model):
     group_id = fields.Many2one(comodel_name='crm.data', domain="[('type', '=', 'group')]", string='Group Partner')
     source_id = fields.Many2one(comodel_name='crm.data', domain="[('type', '=', 'source')]", string='Source Partner')
     partner_state_id = fields.Many2one(comodel_name='crm.data', domain="[('type', '=', 'relation')]", string='Relation')
+    phone = fields.Char(required=True)
     user_id = fields.Many2one(
         'res.users', string='Salesperson',
         compute='_compute_user_id',
