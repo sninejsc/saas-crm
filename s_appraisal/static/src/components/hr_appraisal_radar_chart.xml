@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="s_appraisal.AppraisalRadarChart" owl="1">
+        <div class="o_content">
+            <div class="o_survey_button_back o_control_panel d-flex gap-3 gap-lg-1 px-3 pt-2 pb-3">
+            <a role="button" class="btn btn-primary btn-lg"
+               t-on-click="() => this.goBackAction()">
+                Back
+            </a>
+        </div>
+            <div class="s_appraisal_radar_chart">
+            <ChartRenderer data="state.chartData"/>
+        </div>
+        </div>
+    </t>
+</templates>

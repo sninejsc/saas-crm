@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="survey_user_input_view_tree_inherit" model="ir.ui.view">
+            <field name="name">survey.user_input.view.tree.inherit</field>
+            <field name="model">survey.user_input</field>
+            <field name="inherit_id" ref="survey.survey_user_input_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='survey_id']" position="after">
+                    <field name="employee_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="survey_user_input_view_search_inherit" model="ir.ui.view">
+            <field name="name">survey.user_input.view.search.inherit</field>
+            <field name="model">survey.user_input</field>
+            <field name="inherit_id" ref="survey.survey_user_input_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search/field[@name='survey_id']" position="after">
+                    <field name="employee_id" string="Reviewed Employees"/>
+                </xpath>
+                <xpath expr="//search/group/filter[@name='group_by_partner']" position="attributes">
+                    <attribute name="string">Partner</attribute>
+                </xpath>
+                <xpath expr="//search/group/filter[@name='group_by_partner']" position="after">
+                    <filter string="Reviewed Employees" name="group_by_reviewed_employees"
+                            context="{'group_by': 'employee_id'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="survey.action_survey_user_input">
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_id" ref="survey.survey_user_input_view_tree"/>
+            <field name="search_view_id" ref="s_appraisal.survey_user_input_view_search_inherit"/>
+            <field name="domain">[('survey_id.survey_type', '=', 'appraisal')]</field>
+            <field name="context">{
+                'search_default_completed': 1,
+                'search_default_group_by_reviewed_employees': True}
+            </field>
+        </record>
+    </data>
+</odoo>

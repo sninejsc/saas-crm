@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_org_chart.action_hr_employee_org_chart" model="ir.actions.act_window">
+        <field name="mobile_view_mode">hierarchy</field>
+    </record>
+</odoo>

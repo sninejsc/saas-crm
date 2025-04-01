@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="room_booking_view_form_inherit" model="ir.ui.view">
+            <field name="name">room.booking.view.form.inherit</field>
+            <field name="model">room.booking</field>
+            <field name="inherit_id" ref="room.room_booking_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="action_cancel" type="object" string="Cancel" class="oe_highlight"
+                                invisible="state == 'in_progress' or state == 'cancelled' or state == 'draft' or create_uid != uid"/>
+                        <button name="action_to_draft" type="object" string="To Draft" class="oe_highlight"
+                                invisible="state != 'cancelled' or create_uid != uid"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <field name="create_uid" invisible="1"/>
+                    <field name="hide_reviews" invisible="1"/>
+                    <field name="need_validation" invisible="1"/>
+                    <field name="validated" invisible="1"/>
+                    <field name="rejected" invisible="1"/>
+                    <field name="can_review" invisible="1"/>
+                    <field name="can_forward" invisible="1"/>
+                    <field name="review_ids" invisible="1"/>
+                    <field name="next_review" invisible="1"/>
+                </xpath>
+                <xpath expr="//form/sheet/div/h1/field[@name='name']" position="attributes">
+                    <attribute name="readonly">state != 'draft'</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='room_id']" position="attributes">
+                    <attribute name="readonly">state != 'draft'</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='stop_datetime']" position="attributes">
+                    <attribute name="readonly">state != 'draft'</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='start_datetime']" position="attributes">
+                    <attribute name="readonly">state != 'draft'</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='stop_datetime']" position="attributes">
+                    <attribute name="readonly">state != 'draft'</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='stop_datetime']" position="attributes">
+                    <attribute name="readonly">state != 'draft'</attribute>
+                </xpath>
+                <xpath expr="//form/sheet/group/group/field[@name='organizer_id']" position="attributes">
+                    <attribute name="readonly">state != 'draft'</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_room_booking_calendar" model="ir.ui.view">
+            <field name="name">room.booking.calendar</field>
+            <field name="model">room.booking</field>
+            <field name="arch" type="xml">
+                <calendar string="Approve The Reservation" date_start="start_datetime" date_stop="stop_datetime"
+                          color="room_id" quick_create="0" event_open_popup="1">
+                    <field name="room_id"/>
+                    <field name="state"/>
+                    <field name="organizer_id"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="view_room_booking_tree" model="ir.ui.view">
+            <field name="name">room.booking.tree</field>
+            <field name="model">room.booking</field>
+            <field name="arch" type="xml">
+                <tree string="Approve The Reservation">
+                    <field name="name"/>
+                    <field name="room_id"/>
+                    <field name="start_datetime"/>
+                    <field name="stop_datetime"/>
+                    <field name="state"/>
+                    <field name="organizer_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_room_booking_search" model="ir.ui.view">
+            <field name="name">room.booking.search</field>
+            <field name="model">room.booking</field>
+            <field name="arch" type="xml">
+                <search string="Approve The Reservation">
+                    <field name="name"/>
+                    <field name="room_id"/>
+                    <field name="start_datetime"/>
+                    <field name="stop_datetime"/>
+                    <field name="state"/>
+                    <group expand="1" string="Group By">
+                        <filter name="group_by_room" string="Room" context="{'group_by': 'room_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_room_booking" model="ir.actions.act_window">
+            <field name="name">Approve The Reservation</field>
+            <field name="res_model">room.booking</field>
+            <field name="view_mode">calendar,tree,form</field>
+            <field name="search_view_id" ref="view_room_booking_search"/>
+            <field name="context">{
+                'search_default_group_by_room': 1,
+                'search_default_state': 'in_progress'
+                }
+            </field>
+        </record>
+    </data>
+
+</odoo>
+

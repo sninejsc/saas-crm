@@ -1,0 +1,537 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* intech_hrm,hr,hr_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240330\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-13 06:35+0000\n"
+"PO-Revision-Date: 2025-01-13 06:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: intech_hrm
+#: model:ir.model,name:intech_hrm.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: intech_hrm
+#: model:ir.model.fields.selection,name:intech_hrm.selection__hr_employee__state__leave
+msgid "Leave"
+msgstr "Đã nghỉ"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee__state
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__state
+msgid "State"
+msgstr "Tình trạng"
+
+#. module: intech_hrm
+#: model:ir.model.fields.selection,name:intech_hrm.selection__hr_employee__state__working
+msgid "Working"
+msgstr "Đang làm"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.room_room_form_inherit
+msgid "Office"
+msgstr "Văn phòng"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.room_room_form_inherit
+msgid "Office"
+msgstr "Văn phòng"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.room_room_form_inherit
+msgid "Amenities"
+msgstr "Tiện ích"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.room_room_form_inherit
+msgid "Appearance"
+msgstr "Giao diện"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_ids
+msgid "Activities"
+msgstr "Hoạt động"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Trang trí Ngoại lệ Hoạt động"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_state
+msgid "Activity State"
+msgstr "Trạng thái Hoạt động"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Biểu tượng Loại Hoạt động"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_contract__basic_salary
+msgid "Basic Salary"
+msgstr "Lương cơ bản"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__can_forward
+msgid "Can Forward"
+msgstr "Có thể chuyển tiếp"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__can_review
+msgid "Can Review"
+msgstr "Có thể xem"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.room_booking_view_form_inherit
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: intech_hrm
+#: model:ir.model.fields.selection,name:intech_hrm.selection__room_booking__state__cancelled
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: intech_hrm
+#: model:ir.model.fields.selection,name:intech_hrm.selection__room_booking__state__confirm
+msgid "Confirm"
+msgstr "Đã duyệt"
+
+#. module: intech_hrm
+#: model:ir.model.fields.selection,name:intech_hrm.selection__room_booking__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: intech_hrm
+#: model:ir.model,name:intech_hrm.model_hr_contract
+msgid "Employee Contract"
+msgstr "Hợp đồng nhân viên"
+
+#. module: intech_hrm
+#: model:ir.model.fields,help:intech_hrm.field_hr_contract__wage
+msgid "Employee's monthly gross wage."
+msgstr "Tổng lương hàng tháng của nhân viên."
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__enable_restart_validation
+msgid "Enable Restart Validation"
+msgstr "Bật xác thực khởi động lại"
+
+#. module: intech_hrm
+#: model:ir.model.fields,help:intech_hrm.field_room_booking__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Biểu tượng Font Awesome, ví dụ: fa-tasks"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_contract__fuel_allowance
+msgid "Fuel Allowance"
+msgstr "Trợ cấp Nhiên liệu"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__has_comment
+msgid "Has Comment"
+msgstr "Có Bình luận"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__hide_reviews
+msgid "Hide Reviews"
+msgstr "Ẩn Bình luận"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: intech_hrm
+#: model:ir.model.fields,help:intech_hrm.field_room_booking__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng để chỉ ra một hoạt động ngoại lệ."
+
+#. module: intech_hrm
+#: model:ir.model.fields,help:intech_hrm.field_room_booking__has_comment
+msgid "If set, Allow the reviewer to leave a comment on the review."
+msgstr "Nếu được thiết lập, cho phép người đánh giá để lại bình luận về đánh giá."
+
+#. module: intech_hrm
+#: model:ir.model.fields.selection,name:intech_hrm.selection__room_booking__state__in_progress
+msgid "In Progress"
+msgstr "Chờ duyệt"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_contract__meal_allowance
+msgid "Meal Allowance"
+msgstr "Trợ cấp Bữa ăn"
+
+#. module: intech_hrm
+#: model:ir.model.fields,help:intech_hrm.field_hr_contract__meal_allowance
+msgid "Meal allowance"
+msgstr "Trợ cấp bữa ăn"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Hạn chót Hoạt động của tôi"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__need_validation
+msgid "Need Validation"
+msgstr "Cần Xác nhận"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Sự kiện Lịch Hoạt động Tiếp theo"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót Hoạt động Tiếp theo"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt Hoạt động Tiếp theo"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_type_id
+msgid "Next Activity Type"
+msgstr "Loại Hoạt động Tiếp theo"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__next_review
+msgid "Next Review"
+msgstr "Đánh giá Tiếp theo"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_contract__other_allowance
+msgid "Other Allowance"
+msgstr "Trợ cấp Khác"
+
+#. module: intech_hrm
+#: model:ir.model.fields,help:intech_hrm.field_hr_contract__other_allowance
+msgid "Other allowances"
+msgstr "Các khoản trợ cấp khác"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_contract__performance_salary
+msgid "Performance Salary"
+msgstr "Lương theo Hiệu suất"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__rating_ids
+msgid "Ratings"
+msgstr "Đánh giá"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__rejected
+#: model:ir.model.fields.selection,name:intech_hrm.selection__room_booking__state__rejected
+msgid "Rejected"
+msgstr "Từ chối"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__rejected_message
+msgid "Rejected Message"
+msgstr "Thông điệp bị từ chối"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__activity_user_id
+msgid "Responsible User"
+msgstr "Người phụ trách"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__reviewer_ids
+msgid "Reviewers"
+msgstr "Người đánh giá"
+
+#. module: intech_hrm
+# . odoo-python
+#: code:addons/intech-erp/intech_hrm/models/room_booking.py:0
+#: code:addons/intech_hrm/models/room_booking.py:0
+#, python-format
+msgid "Room %s is already booked during the selected time slot."
+msgstr "Phòng %s đã được đặt trong khoảng thời gian đã chọn."
+
+#. module: intech_hrm
+#: model:ir.model,name:intech_hrm.model_room_booking
+msgid "Room Booking"
+msgstr "Đặt phòng"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi Gửi SMS"
+
+#. module: intech_hrm
+#: model:ir.model.fields,help:intech_hrm.field_room_booking__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày hết hạn đã qua\n"
+"Hôm nay: Ngày hoạt động là hôm nay\n"
+"Đã lên kế hoạch: Hoạt động trong tương lai."
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.room_booking_view_form_inherit
+msgid "To Draft"
+msgstr "Đặt về nháp"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__to_validate_message
+msgid "To Validate Message"
+msgstr "Thông điệp Cần xác nhận"
+
+#. module: intech_hrm
+#: model:ir.model.fields,help:intech_hrm.field_room_booking__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trong bản ghi."
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__validated
+msgid "Validated"
+msgstr "Đã xác nhận"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__validated_message
+msgid "Validated Message"
+msgstr "Thông điệp Đã xác nhận"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__validation_status
+msgid "Validation Status"
+msgstr "Trạng thái Xác nhận"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__review_ids
+msgid "Validations"
+msgstr "Các xác nhận"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_room_booking__website_message_ids
+msgid "Website Messages"
+msgstr "Tin nhắn Website"
+
+#. module: intech_hrm
+#: model:ir.model.fields,help:intech_hrm.field_room_booking__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử giao tiếp Website"
+
+#. module: intech_hrm
+#: model:ir.actions.act_window,name:intech_hrm.action_room_booking
+#: model:ir.ui.menu,name:intech_hrm.menu_room_booking_approve
+#: model_terms:ir.ui.view,arch_db:intech_hrm.view_room_booking_calendar
+#: model_terms:ir.ui.view,arch_db:intech_hrm.view_room_booking_search
+#: model_terms:ir.ui.view,arch_db:intech_hrm.view_room_booking_tree
+msgid "Approve The Reservation"
+msgstr "Phê duyệt đặt phòng"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.view_room_booking_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.view_room_booking_search
+msgid "Room"
+msgstr "Phòng"
+
+#. module: intech_hrm
+#: model:ir.model,name:intech_hrm.model_room_booking
+msgid "Room Booking"
+msgstr "Đặt phòng"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.view_employee_form_inherit
+msgid "Import Resume"
+msgstr "Nhập sơ yếu lý lịch"
+
+#. module: intech_hrm
+#. odoo-python
+#: code:addons/intech_hrm/models/hr_employee.py:0
+#, python-format
+msgid "Resume %s"
+msgstr "Sơ yếu lý lịch của %s"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee__children
+#: model:ir.model.fields,field_description:hr.field_res_users__children
+msgid "Number of Dependent Children"
+msgstr "Số con"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract__contract_type_id
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract_history__contract_type_id
+msgid "Contract Type"
+msgstr "Loại hợp đồng"
+
+#. module: hr
+#: model:ir.actions.act_window,name:hr.hr_contract_type_action
+#: model:ir.ui.menu,name:hr.menu_view_hr_contract_type
+msgid "Employment Types"
+msgstr "Loại hợp đồng"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__name
+msgid "Degree Name"
+msgstr "Tên bằng cấp"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee__degree_ids
+msgid "Degrees"
+msgstr "Bằng cấp"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.hr_employee_resume_view_form
+msgid "Degree Details"
+msgstr "Chi tiết bằng cấp"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__classification
+msgid "Classification"
+msgstr "Xếp loại"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__certificate
+msgid "Certificate"
+msgstr "Chứng chỉ"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__major
+msgid "Major"
+msgstr "Chuyên ngành"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__end_date
+msgid "End Date"
+msgstr "Đến ngày"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__start_date
+msgid "Start Date"
+msgstr "Từ ngày"
+
+#. module: intech_hrm
+#: model:ir.model,name:intech_hrm.model_hr_employee_degree
+msgid "Employee Degree"
+msgstr "Bằng cấp"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.room_room_view_kanban_inherit
+msgid "Available"
+msgstr "Hiện đang trống"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.room_room_view_kanban_inherit
+msgid "Busy"
+msgstr "Bận"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee__code
+msgid "Employee Code"
+msgstr "Mã nhân viên"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: intech_hrm
+#: model:res.groups,name:intech_hrm.group_hr_contract_user_employee
+msgid "Employees"
+msgstr "Nhân viên"
+
+#. module: intech_hrm
+#: model:res.groups,name:intech_hrm.group_user_employee
+msgid "Hr Employees"
+msgstr "Nhân viên"
+
+#. module: intech_hrm
+#: model:res.groups,name:intech_hrm.group_user_hr_sbu
+msgid "Hr SBU Employees"
+msgstr "Hr SBU"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_contract_employee__contract_date_end
+msgid "Contract End Date"
+msgstr "Ngày kết thúc hợp đồng"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_contract_employee__contract_state
+msgid "Contract State"
+msgstr "Trạng thái hợp đồng"
+
+#. module: intech_hrm
+#: model:ir.actions.act_window,name:intech_hrm.action_hr_contract_employee
+#: model:ir.ui.menu,name:intech_hrm.menu_contract_status
+#: model_terms:ir.ui.view,arch_db:intech_hrm.view_hr_contract_employee_tree
+msgid "Contract Status"
+msgstr "Tình trạng hợp đồng"
+
+#. module: intech_hrm
+#: model:ir.model,name:intech_hrm.model_hr_contract_employee
+msgid "Contract Status Employee"
+msgstr "Xem tình trạng hợp đồng"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__create_uid
+msgid "Created by"
+msgstr "Người tạo"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__create_date
+msgid "Created on"
+msgstr "Ngày tạo"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_contract_employee__employee_name
+msgid "Employee Name"
+msgstr "Tên nhân viên"
+
+#. module: intech_hrm
+#: model:ir.model.fields.selection,name:intech_hrm.selection__hr_contract_employee__contract_state__close
+msgid "Expired"
+msgstr "Hết hạn"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__write_uid
+msgid "Last Updated by"
+msgstr "Người cập nhật cuối"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_employee_degree__write_date
+msgid "Last Updated on"
+msgstr "Ngày cập nhật cuối"
+
+#. module: intech_hrm
+#: model:ir.model.fields,field_description:intech_hrm.field_hr_contract_employee__contract_id
+msgid "Latest Contract"
+msgstr "Hợp đồng mới nhất"
+
+#. module: intech_hrm
+#: model:ir.model.fields.selection,name:intech_hrm.selection__hr_contract_employee__contract_state__draft
+msgid "New"
+msgstr "Mới"
+
+#. module: intech_hrm
+#: model:ir.model.fields.selection,name:intech_hrm.selection__hr_contract_employee__contract_state__open
+msgid "Running"
+msgstr "Đang hoạt động"
+
+#. module: intech_hrm
+#. odoo-python
+#: code:addons/intech_hrm/models/hr_employee.py:0
+#, python-format
+msgid "Employee code '%s' already exists."
+msgstr "Mã nhân viên '%s' đã tồn tại."

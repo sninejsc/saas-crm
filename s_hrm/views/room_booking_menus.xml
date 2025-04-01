@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="menu_room_booking_approve" name="Approve The Reservation" parent="room.room_menu_root"
+                  action="action_room_booking" sequence="10" groups="room.group_room_manager"/>
+    </data>
+</odoo>

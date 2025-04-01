@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_leave_view_tier" model="ir.ui.view">
+        <field name="name">hr_leave_view_tier</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form_manager"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_approve']" position="after">
+                <button invisible="1"/>
+            </xpath>
+
+            <xpath expr="//button[@name='action_approve']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_refuse']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//form/sheet" position="before">
+                <field name="create_uid" invisible="1"/>
+                <field name="hide_reviews" invisible="1"/>
+                <field name="need_validation" invisible="1"/>
+                <field name="validated" invisible="1"/>
+                <field name="rejected" invisible="1"/>
+                <field name="can_review" invisible="1"/>
+                <field name="can_forward" invisible="1"/>
+                <field name="review_ids" invisible="1"/>
+                <field name="next_review" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_leave_view_tree_tier" model="ir.ui.view">
+        <field name="name">hr_leave_view_tree_tier</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_approve']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_refuse']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='action_validate']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_form_new_time_off_tier" model="ir.ui.view">
+        <field name="name">view_form_new_time_off_tier</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form_dashboard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="after">
+                <field name="hide_reviews" invisible="1"/>
+                 <field name="need_validation" invisible="1"/>
+                <field name="validated" invisible="1"/>
+                <field name="rejected" invisible="1"/>
+                <field name="can_review" invisible="1"/>
+                <field name="can_forward" invisible="1"/>
+                <field name="review_ids" invisible="1"/>
+                <field name="next_review" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

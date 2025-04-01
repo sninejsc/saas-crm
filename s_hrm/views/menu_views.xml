@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+            id="hr.menu_human_resources_configuration"
+            name="Configuration"
+            parent="hr.menu_hr_root"
+            groups="intech_hrm.group_user_hr_sbu,hr.group_hr_manager"
+            sequence="100"/>
+    <menuitem
+            id="hr.hr_menu_hr_reports"
+            name="Reporting"
+            parent="hr.menu_hr_root"
+            groups="intech_hrm.group_user_hr_sbu,hr.group_hr_manager"
+            sequence="95"/>
+    <menuitem
+            id="hr_contract.hr_menu_contract"
+            name="Contracts"
+            action="hr_contract.action_hr_contract"
+            parent="hr.menu_hr_employee_payroll"
+            sequence="6"
+            groups="hr_contract.group_hr_contract_manager,intech_hrm.group_hr_contract_user_employee,intech_hrm.group_hr_contract_sbu_hr"/>
+
+    <record id="hr_holidays.menu_open_department_leave_approve" model="ir.ui.menu">
+        <field name="groups_id"
+               eval="[(4, ref('intech_hrm.group_hr_holiday_hr_sbu')),(4, ref('intech_hrm.group_hr_holiday_leader'))]"/>
+    </record>
+
+    <menuitem
+            id="menu_contract_status"
+            name="Contract Status"
+            parent="hr.menu_hr_employee_payroll"
+            action="action_hr_contract_employee"
+            sequence="50"
+            groups="intech_hrm.group_hr_contract_user_employee,base.group_system"/>
+</odoo>

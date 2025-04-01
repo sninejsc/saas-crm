@@ -1,0 +1,5 @@
+@media (max-width: 992px) {
+    body.o_web_client.input_bottom_border .o_field_invalid .o_input {
+        border-color: #dc3545 !important;
+    }
+}

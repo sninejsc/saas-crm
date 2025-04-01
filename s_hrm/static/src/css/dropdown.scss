@@ -1,0 +1,47 @@
+.custom-dropdown-class {
+    position: relative;
+    list-style: none;
+    color: white;
+}
+
+.custom-ul-class {
+    display: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-dropdown-class.active > .custom-ul-class {
+    display: block;
+}
+
+.custom-ul-class > li {
+    color: white;
+}
+
+.custom-ul-class {
+    overflow-y: auto;
+}
+
+.custom-ul-class li {
+    cursor: pointer;
+}
+
+.custom-bg-class .dropdown_icon {
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.custom-dropdown-class.active > div > .dropdown_icon {
+    transform: rotate(90deg);
+}
+
+.o_burger_menu .o_burger_menu_content ul li ul > li,
+.o_burger_menu .o_burger_menu_content ul li ul > li > div {
+    text-indent: 0 !important;
+}

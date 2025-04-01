@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <template id="survey_button_retake_inherit" inherit_id="survey.survey_button_retake">
+        <xpath expr="//div/t/t/p/a[@class='btn btn-primary btn-lg']" position="attributes">
+            <attribute name="class">btn btn-primary btn-lg d-none</attribute>
+        </xpath>
+    </template>
+</data>
+</odoo>

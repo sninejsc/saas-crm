@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template inherit_id="survey.survey_page_print" id="survey_page_print_inherit">
+            <xpath expr="//t/div/div/div[@t-if='graph_data']" position="attributes">
+                <attribute name="class">o_survey_result p-4 col-12 row d-none</attribute>
+            </xpath>
+
+            <xpath expr="//t/div/div/div[@class='w-lg-50 mx-lg-auto']" position="attributes">
+                <attribute name="class">mx-lg-auto</attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>

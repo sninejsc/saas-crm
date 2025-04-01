@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <div t-inherit="web.BurgerSection" t-inherit-mode="extension">
+        <xpath expr="//li[@t-if='section.childrenTree.length']" position="attributes">
+            <attribute name="class">ps-0 custom-dropdown-class</attribute>
+        </xpath>
+        <xpath expr="//div[@class='bg-transparent']" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+        <xpath expr="//div[@class='bg-transparent']" position="after">
+            <div class="bg-transparent custom-bg-class fw-bold text-900 pt-3 pb-2"
+                 t-att-class="{
+                'fw-bold text-900 pt-3 pb-2': !isNested,
+                'border-top': !isNested &amp;&amp; subMenu_index != 0,
+                'py-2': isNested,
+                }" t-att-data-menu-xmlid="section.xmlid" onclick="toggleActiveOnParent(this)">
+                <t t-esc="section.name"/>
+                <span class="ri ri-arrow-right-s-line ms-auto dropdown_icon"></span>
+            </div>
+        </xpath>
+
+        <xpath expr="//ul[@class='ps-0']" position="replace">
+            <ul class="ps-0 custom-ul-class">
+                <t t-foreach="section.childrenTree" t-as="subSection" t-key="subSection_index">
+                    <t t-call="web.BurgerSection">
+                        <t t-set="section" t-value="subSection"/>
+                        <t t-set="isNested" t-value="true"/>
+                    </t>
+                </t>
+            </ul>
+        </xpath>
+    </div>
+
+</templates>
