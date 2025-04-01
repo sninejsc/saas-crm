@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': "Snine Appraisal",
+    'name': "S-Appraisal",
     'author': 'SNine',
     'company': 'SNine',
     'maintainer': 'SNine',
-    'website': "https://www.snine.vn",
+    'website': "https://snine.vn",
     'category': 'Uncategorized',
     'version': '1.2',
     'depends': ['base', 'web', 'mail', 'hr_appraisal', 'hr_appraisal_survey', 'survey'],
@@ -28,6 +28,7 @@
         ]
     },
     "price": 5,
+    'images': ['static/description/banner.png'],
     'installable': True,
     'application': True,
     'license': 'LGPL-3',

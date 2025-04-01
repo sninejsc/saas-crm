@@ -4,7 +4,7 @@
     'author': 'SNine',
     'company': 'SNine',
     'maintainer': 'SNine',
-    'website': "https://www.snine.vn",
+    'website': "https://snine.vn",
     'category': 'HRM',
     'version': '0.1',
     'depends': ['base', 'room', 'mail',
@@ -36,6 +36,7 @@
         ]
     },
     "price": 5,
+    'images': ['static/description/banner.png'],
     "installable": True,
     'application': True,
     'license': 'LGPL-3',
