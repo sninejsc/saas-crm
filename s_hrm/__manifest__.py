@@ -7,8 +7,8 @@
     'website': "https://www.snine.vn",
     'category': 'HRM',
     'version': '0.1',
-    'depends': ['base', 'room', 'mail', 'tier_validation', 'base_tier_validation_forward', 'hr_org_chart',
-                'hr_holidays', 'hr_skills', 'hr_contract', 'web', 'hr_employee_updation', 'hr', 's_attendance'],
+    'depends': ['base', 'room', 'mail',
+                'hr_holidays', 'hr_skills', 'hr_contract', 'web', 'hr'],
     'data': [
         'data/sequence_code_employee.xml',
         'security/security_rules.xml',
