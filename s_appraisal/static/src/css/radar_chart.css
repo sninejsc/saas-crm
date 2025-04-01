@@ -1,0 +1,6 @@
+.s_appraisal_radar_chart {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="hr_appraisal_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.appraisal.view.form</field>
+        <field name="model">hr.appraisal</field>
+        <field name="inherit_id" ref="hr_appraisal_survey.hr_appraisal_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_ask_feedback']" position="after">
+                <button name="action_feedback_results" data-hotkey="s" string="Feedback Results"
+                        invisible="state != 'pending'" type="object"/>
+                <button name="action_do_appraisal" string="Do Appraisal"
+                        invisible="state != 'pending'" type="object"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="inherit_view_hr_appraisal_form" model="ir.ui.view">
+        <field name="name">hr.appraisal.form.inherit</field>
+        <field name="model">hr.appraisal</field>
+        <field name="inherit_id" ref="hr_appraisal.view_hr_appraisal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='col-12 o_appraisal_input position-relative']" position="attributes">
+                <attribute name="class">col-12 o_appraisal_input position-relative mt-3</attribute>
+            </xpath>
+            <xpath expr="//div[@class='col-12 o_appraisal_input position-relative mt-3']/field[@name='employee_feedback']"
+                   position="before">
+                <field name="is_check_feedback" invisible="1"/>
+            </xpath>
+            <xpath expr="//div[@class='col-12 o_appraisal_input position-relative mt-3']/field[@name='employee_feedback']"
+                   position="attributes">
+                <attribute name="readonly">state not in ['new', 'pending'] or not can_see_employee_publish or is_check_feedback</attribute>
+            </xpath>
+            <xpath expr="//sheet/group/group/field[@name='manager_ids']" position="attributes">
+                <attribute name="force_save">1</attribute>
+                <attribute name="readonly">1</attribute>
+            </xpath>
+            <xpath expr="//header/button[@name='action_done']" position="attributes">
+                <attribute name="invisible">state != 'pending' or uid not in manager_user_ids</attribute>
+            </xpath>
+            <xpath expr="//header/button[@name='action_cancel']" position="attributes">
+                <attribute name="invisible">state != 'pending' or uid not in manager_user_ids</attribute>
+            </xpath>
+            <xpath expr="//header/button[@name='action_back']" position="attributes">
+                <attribute name="invisible">state != 'done' and state != 'cancel' or uid not in manager_user_ids</attribute>
+            </xpath>
+            <xpath expr="//sheet/div[@class='oe_button_box']/button[@name='action_calendar_event']" position="after">
+                <button name="action_hr_appraisal_radar_chart"
+                        type="object"
+                        string="Radar Chart"
+                        class="oe_stat_button"
+                        icon="fa-bar-chart"
+                        invisible="state != 'done'"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="inherit_hr_appraisal_view_form" model="ir.ui.view">
+        <field name="name">inherit.hr.appraisal.view.form</field>
+        <field name="model">hr.appraisal</field>
+        <field name="inherit_id" ref="hr_appraisal_survey.hr_appraisal_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_open_survey_inputs']" position="attributes">
+                <attribute name="invisible">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_hr_appraisal_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.appraisal.tree.inherit</field>
+        <field name="model">hr.appraisal</field>
+        <field name="inherit_id" ref="hr_appraisal.view_hr_appraisal_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="feedback_status"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_appraisal_search_inherit" model="ir.ui.view">
+        <field name="name">hr.appraisal.search.inherit</field>
+        <field name="model">hr.appraisal</field>
+        <field name="inherit_id" ref="hr_appraisal.hr_appraisal_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/filter[@name='activities_overdue']" position="after">
+                <filter name="groupby_feedback_status" context="{'group_by': 'feedback_status'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

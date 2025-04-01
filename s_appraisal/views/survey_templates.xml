@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="body_question_container" inherit_id="survey.question_container">
+            <xpath expr="//div" position="attributes">
+                <attribute name="t-attf-class">
+                    js_question-wrapper pb-4
+                   #{'d-none' if not display_question else ''}
+                   #{'me-2' if extra_right_margin else ''}
+                   #{'' if survey.questions_layout != 'page_per_question' else ''}
+                </attribute>
+            </xpath>
+        </template>
+
+        <template id="sne_survey_fill_form_in_progress" inherit_id="survey.survey_fill_form_in_progress">
+            <xpath expr="//t/t/h2[@class='o_survey_title pb16 text-break w-lg-50 mx-lg-auto']" position="attributes">
+                <attribute name="class">o_survey_title pb16 text-break mx-lg-auto</attribute>
+            </xpath>
+        </template>
+
+        <template id="custom_brand_promotion_message" inherit_id="web.brand_promotion_message">
+            <xpath expr="//t[@t-set='odoo_logo']/a" position="replace">
+                <a target="_blank"
+                    t-attf-href="https://soon.vn/"
+                    class="badge text-bg-light">
+                    <img alt="SoOn"
+                        src="/s_appraisal/static/src/img/logo_soon.png"
+                        width="62" height="20"
+                        style="width: auto; height: 1em; vertical-align: baseline;"/>
+                </a>
+            </xpath>
+        </template>
+
+        <template id="sne_survey_fill_form_done" inherit_id="survey.survey_fill_form_done">
+            <xpath expr="//t[@t-call='survey.survey_button_retake']" position="after">
+                <t t-set="answer_token" t-value="request.httprequest.path.split('/')[-1]"/>
+                <t t-set="appraisal" t-value="survey.action_return_appraisal(answer_token)"/>
+                <div class="o_survey_button_back">
+                    <a role="button" class="btn btn-primary btn-lg"
+                       t-att-href="'/web?#id=' + str(appraisal.get('res_id')) + '&amp;model=hr.appraisal&amp;view_type=form'">
+                        Back
+                    </a>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="survey_fill_form_in_progress_inherit" inherit_id="survey.survey_fill_form_in_progress">
+            <xpath expr="//div[@class='o_survey_form_content_data d-none']" position="inside">
+                <script type="text/javascript">
+                    (function () {
+                        const path = window.location.pathname;
+                        const parts = path.split('/');
+                        const lastPart = parts[parts.length - 1];
+
+                        const access_token = lastPart;
+
+                        if (access_token) {
+                            const url = '/survey/close_tab';
+
+                            window.addEventListener('beforeunload', function(event) {
+                                const data = JSON.stringify({
+                                        access_token: access_token
+                                    })
+                                navigator.sendBeacon(url, data);
+                            });
+                        }
+                    })();
+                </script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

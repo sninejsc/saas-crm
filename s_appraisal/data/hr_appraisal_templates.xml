@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hr_appraisal_employee_feedback_custom">
+        <table class="table table-bordered" style="border: 1px solid #000;">
+            <thead>
+                <tr style="border: 1px solid #000;">
+                    <th>Nhóm kỹ năng</th>
+                    <th>Điểm</th>
+                </tr>
+            </thead>
+            <tbody style="border: 1px solid #000;">
+                <tr t-foreach="totals" t-as="item" style="border: 1px solid #000;">
+                    <td>
+                        <t t-esc="item['title']"/>
+                    </td>
+                    <td>
+                        <t t-esc="item['score']"/>
+                    </td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td>Tổng điểm</td>
+                    <td>
+                        <t t-esc="total_score"/>
+                    </td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td>Tổng phần trăm</td>
+                    <td>
+                        <t t-esc="scoring_percentage"/>
+                    </td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td>Loại</td>
+                    <td>
+                        <t t-esc="type_appraisal"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+
+    <template id="hr_appraisal_manager_feedback_custom">
+        <table class="table table-bordered" style="border: 1px solid #000;">
+            <thead>
+                <tr style="border: 1px solid #000;">
+                    <th>Nhóm kỹ năng</th>
+                    <th>Điểm</th>
+                </tr>
+            </thead>
+            <tbody style="border: 1px solid #000;">
+                <tr t-foreach="totals" t-as="item" style="border: 1px solid #000;">
+                    <td>
+                        <t t-esc="item['title']"/>
+                    </td>
+                    <td>
+                        <t t-esc="item['score']"/>
+                    </td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td>Tổng điểm</td>
+                    <td>
+                        <t t-esc="total_score"/>
+                    </td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td>Tổng phần trăm</td>
+                    <td>
+                        <t t-esc="scoring_percentage"/>
+                    </td>
+                </tr>
+                <tr style="border: 1px solid #000;">
+                    <td>Loại</td>
+                    <td>
+                        <t t-esc="type_appraisal"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_appraisal_survey_user_input_view_tree_inherit" model="ir.ui.view">
+        <field name="name">survey.user.input.view.tree.inherit</field>
+        <field name="model">survey.user_input</field>
+        <field name="inherit_id" ref="hr_appraisal_survey.hr_appraisal_survey_user_input_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="manager_ids" column_invisible="1"/>
+                <field name="appraisal_id" column_invisible="1"/>
+                <field name="write_uid" column_invisible="1"/>
+                <field name="is_state_appraisal" column_invisible="1"/>
+            </xpath>
+            <xpath expr="//button[@name='action_ask_feedback']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_open_survey_inputs']" position="after">
+                <button class="oe_stat_button" string="Edit Answers"
+                        invisible="is_state_appraisal or state != 'done' or uid not in manager_ids or write_uid not in manager_ids"
+                        name="action_edit_survey_inputs" icon="fa-external-link" type="object"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
