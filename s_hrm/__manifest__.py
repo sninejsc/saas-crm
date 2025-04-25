@@ -7,7 +7,7 @@
     'website': "https://snine.vn",
     'category': 'HRM',
     'version': '0.1',
-    'depends': ['base', 'room', 'mail', 'tier_validation', 'base_tier_validation_forward', 'hr_org_chart', 's_fleet',
+    'depends': ['base', 'room', 'mail', 'hr_org_chart', 's_fleet',
                 'hr_holidays', 'hr_skills', 'hr_contract', 'web', 'hr_employee_updation', 'hr', 's_attendance',
                 'base_import', 'hr_expense', 'analytic', 'project', 'hr_timesheet', 'timesheet_grid','hr_timesheet_attendance',
                 'resource'],
