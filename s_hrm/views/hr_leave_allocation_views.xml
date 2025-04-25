@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+    <record id="hr_leave_allocation_view_form_manager_inherit" model="ir.ui.view">
+        <field name="name">hr.leave.allocation.view.form.manager.inherit</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form_manager"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='holiday_type']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='employee_ids']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='department_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='mode_company_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='employee_id']" position="before">
+                <field name="holiday_type" string="Mode" context="{'employee_id':employee_id}"
+                       readonly="state not in ['confirm']"/>
+            </xpath>
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="employee_ids" widget="many2many_avatar_employee"
+                    invisible="holiday_type != 'employee' or state != 'confirm' and employee_id"
+                    readonly="state in ['refuse', 'validate']"
+                    required="holiday_type == 'employee' and state == 'confirm'"/>
+            </xpath>
+            <xpath expr="//field[@name='department_id']" position="after">
+                <field name="department_id"
+                    invisible="holiday_type != 'department'"
+                    readonly="state not in ['confirm']"
+                    required="holiday_type == 'department'"/>
+            </xpath>
+            <xpath expr="//field[@name='department_id']" position="after">
+                <field name="mode_company_id" string="Company"
+                    invisible="holiday_type != 'company'"
+                    readonly="state in ['refuse', 'validate']"
+                    required="holiday_type == 'company'"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

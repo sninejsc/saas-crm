@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="view_hr_contract_form_inherit" model="ir.ui.view">
+            <field name="name">hr.contract.form.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header/field[@name='state' and contains(@options, 'clickable')]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/field[@name='state' and not(@options)]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/field[@name='state' and contains(@options, 'clickable')]" position="before">
+                    <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

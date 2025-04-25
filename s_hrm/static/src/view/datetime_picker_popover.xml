@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="intech_hrm.DateTimePickerPopover" t-inherit="web.DateTimePickerPopover" t-inherit-mode="extension">
+        <xpath expr="//DateTimePicker/t/t/button[@tabindex='-1']/span" position="attributes">
+            <attribute name="style">display: none !important;</attribute>
+        </xpath>
+        <xpath expr="//DateTimePicker/t/t/button[@tabindex='-1']/i" position="after">
+            <span>Apply</span>
+        </xpath>
+    </t>
+</templates>

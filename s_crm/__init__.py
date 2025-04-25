@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from . import controllers
+from . import pyarmor_runtime_000000
 from . import models
 
 def post_init_hook_remove_rule_core_crm(env):

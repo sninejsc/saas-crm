@@ -5,32 +5,199 @@
             id="hr.menu_human_resources_configuration"
             name="Configuration"
             parent="hr.menu_hr_root"
-            groups="intech_hrm.group_user_hr_sbu,hr.group_hr_manager"
+            groups="intech_hrm.group_user_hr_sbu,intech_hrm.group_user_manager_sbu,hr.group_hr_manager"
             sequence="100"/>
     <menuitem
             id="hr.hr_menu_hr_reports"
             name="Reporting"
             parent="hr.menu_hr_root"
-            groups="intech_hrm.group_user_hr_sbu,hr.group_hr_manager"
+            groups="intech_hrm.group_user_dhr,intech_hrm.group_user_hr_sbu,intech_hrm.group_user_manager_sbu,hr.group_hr_manager"
             sequence="95"/>
+    <menuitem
+            id="hr_menu_my_employee_list"
+            name="Employees My"
+            action="intech_hrm.open_view_my_employee_list"
+            parent="hr.menu_hr_employee_payroll"
+            groups="hr.group_hr_user,intech_hrm.group_user_leader"
+            sequence="2"/>
+
+    <menuitem
+            id="hr_org_chart.menu_hr_employee_org_chart"
+            action="hr_org_chart.action_hr_employee_org_chart"
+            groups="base.group_system"
+            parent="hr.menu_hr_employee_payroll"
+            sequence="5"
+    />
+    <menuitem
+            id="hr.menu_hr_employee_user"
+            parent="hr.menu_hr_employee_payroll"
+            groups="intech_hrm.group_user_hr_sbu,intech_hrm.group_user_manager_sbu,hr.group_hr_manager,intech_hrm.group_user_dhr"
+            sequence="1"/>
+
     <menuitem
             id="hr_contract.hr_menu_contract"
             name="Contracts"
             action="hr_contract.action_hr_contract"
             parent="hr.menu_hr_employee_payroll"
             sequence="6"
-            groups="hr_contract.group_hr_contract_manager,intech_hrm.group_hr_contract_user_employee,intech_hrm.group_hr_contract_sbu_hr"/>
+            groups="hr_contract.group_hr_contract_employee_manager,hr_contract.group_hr_contract_manager,intech_hrm.group_hr_contract_user_employee,intech_hrm.group_hr_contract_sbu_hr,intech_hrm.group_hr_contract_sbu_manager,intech_hrm.group_hr_contract_dhr"/>
 
-    <record id="hr_holidays.menu_open_department_leave_approve" model="ir.ui.menu">
-        <field name="groups_id"
-               eval="[(4, ref('intech_hrm.group_hr_holiday_hr_sbu')),(4, ref('intech_hrm.group_hr_holiday_leader'))]"/>
-    </record>
+    <menuitem id="hr_contract_reports.menu_report_contract_employee_all"
+              name="Contracts"
+              action="hr_contract_reports.contract_employee_report_action"
+              parent="hr.hr_menu_hr_reports"
+              groups="hr_contract.group_hr_contract_manager,intech_hrm.group_hr_contract_sbu_hr,intech_hrm.group_hr_contract_sbu_manager,intech_hrm.group_hr_contract_dhr"
+              sequence="1"/>
+
+    <menuitem id="s_attendance.menu_device_config"
+              name="Configuration"
+              parent="hr_attendance.menu_hr_attendance_root"
+              groups="intech_hrm.group_hr_attendance_manager_sbu,intech_hrm.group_hr_attendance_sbu_hr,hr_attendance.group_hr_attendance_manager"
+              sequence="50"/>
+    <menuitem id="hr_attendance.menu_hr_attendance_reporting" name="Reporting"
+              parent="hr_attendance.menu_hr_attendance_root" sequence="15"
+              groups="intech_hrm.group_hr_attendance_manager_sbu,intech_hrm.group_hr_attendance_sbu_hr,intech_hrm.group_hr_attendance_dhr,hr_attendance.group_hr_attendance_manager"
+              action="hr_attendance.hr_attendance_reporting"/>
+    <menuitem id="hr_expense.menu_hr_expense_configuration" name="Configuration" parent="hr_expense.menu_hr_expense_root"
+              groups="intech_hrm.group_hr_expense_hr_sbu,intech_hrm.group_hr_expense_manager_sbu,hr_expense.group_hr_expense_manager"
+            sequence="100"/>
 
     <menuitem
-            id="menu_contract_status"
-            name="Contract Status"
-            parent="hr.menu_hr_employee_payroll"
-            action="action_hr_contract_employee"
-            sequence="50"
-            groups="intech_hrm.group_hr_contract_user_employee,base.group_system"/>
+        id="hr_holidays.menu_hr_holidays_management"
+        name="Management"
+        parent="hr_holidays.menu_hr_holidays_root"
+        sequence="3"
+        groups="intech_hrm.group_hr_holiday_dhr,intech_hrm.group_hr_holiday_manager_sbu,intech_hrm.group_hr_holiday_hr_sbu,hr_holidays.group_hr_holidays_manager"/>
+    <menuitem
+        id="hr_holidays.hr_holidays_menu_manager_approve_allocations"
+        name="Allocations"
+        parent="hr_holidays.menu_hr_holidays_management"
+        action="hr_holidays.hr_leave_allocation_action_approve_department"
+        sequence="2"
+        groups="intech_hrm.group_hr_holiday_dhr,intech_hrm.group_hr_holiday_manager_sbu,intech_hrm.group_hr_holiday_hr_sbu,hr_holidays.group_hr_holidays_manager"/>
+    <menuitem
+        id="hr_holidays.menu_hr_holidays_report"
+        name="Reporting"
+        parent="hr_holidays.menu_hr_holidays_root"
+        groups="intech_hrm.group_hr_holiday_dhr,intech_hrm.group_hr_holiday_manager_sbu,intech_hrm.group_hr_holiday_hr_sbu,hr_holidays.group_hr_holidays_manager"
+        sequence="4"/>
+    <menuitem
+        id="hr_holidays.menu_hr_holidays_configuration"
+        name="Configuration"
+        parent="hr_holidays.menu_hr_holidays_root"
+        groups="intech_hrm.group_hr_holiday_manager_sbu,intech_hrm.group_hr_holiday_hr_sbu,hr_holidays.group_hr_holidays_manager"
+        sequence="5"/>
+    <menuitem id="hr_expense.menu_hr_expense_reports" name="Reporting" sequence="4" parent="hr_expense.menu_hr_expense_root"
+                  groups="intech_hrm.group_hr_expense_dhr,intech_hrm.group_hr_expense_manager_sbu,intech_hrm.group_hr_expense_hr_sbu,hr_expense.group_hr_expense_manager"/>
+
+    <menuitem id="hr_expense.menu_hr_expense_report"
+              name="Expense Reports" sequence="2"
+              parent="hr_expense.menu_hr_expense_root"
+              action="hr_expense.action_hr_expense_sheet_all"
+              groups="account.group_account_user,hr_expense.group_hr_expense_team_approver,intech_hrm.group_hr_expense_dhr,intech_hrm.group_hr_expense_manager_sbu,intech_hrm.group_hr_expense_hr_sbu"/>
+
+    <menuitem
+        id="hr_holidays.hr_holidays_status_menu_configuration"
+        action="hr_holidays.open_view_holiday_status"
+        name="Time Off Types"
+        parent="hr_holidays.menu_hr_holidays_configuration"
+        groups="hr_holidays.group_hr_holidays_manager,intech_hrm.group_hr_expense_manager_sbu,intech_hrm.group_hr_expense_hr_sbu"
+        sequence="1"/>
+
+    <menuitem
+        id="hr_holidays.hr_holidays_accrual_menu_configuration"
+        action="hr_holidays.open_view_accrual_plans"
+        name="Accrual Plans"
+        parent="hr_holidays.menu_hr_holidays_configuration"
+        groups="hr_holidays.group_hr_holidays_manager,intech_hrm.group_hr_expense_manager_sbu,intech_hrm.group_hr_expense_hr_sbu"
+        sequence="2"/>
+
+    <menuitem
+        id="hr_holidays.hr_holidays_public_time_off_menu_configuration"
+        action="hr_holidays.open_view_public_holiday"
+        name="Public Holidays"
+        parent="hr_holidays.menu_hr_holidays_configuration"
+        groups="hr_holidays.group_hr_holidays_manager,intech_hrm.group_hr_expense_manager_sbu,intech_hrm.group_hr_expense_hr_sbu"
+        sequence="3"/>
+
+    <menuitem
+        id="hr_holidays.hr_holidays_mandatory_day_menu_configuration"
+        action="hr_holidays.hr_leave_mandatory_day_action"
+        name="Mandatory Days"
+        parent="hr_holidays.menu_hr_holidays_configuration"
+        groups="hr_holidays.group_hr_holidays_manager,intech_hrm.group_hr_expense_manager_sbu,intech_hrm.group_hr_expense_hr_sbu"
+        sequence="4"/>
+
+    <menuitem
+            id="s_fleet.menu_fleet_booking_approve"
+            parent="s_fleet.fleet_menu_root"
+            action="s_fleet.action_fleet_booking_approve_server"
+            groups="s_fleet.group_fleet_manager,intech_hrm.group_fleet_sbu_manager,intech_hrm.group_fleet_sbu_hr"
+            sequence="10"/>
+
+    <menuitem id="hr_timesheet.timesheet_menu_root"
+              name="Timesheets"
+              sequence="75"
+              groups="hr_timesheet.group_hr_timesheet_user,intech_hrm.group_hr_analytic_leader,intech_hrm.group_hr_analytic_sbu_hr,intech_hrm.group_hr_analytic_manager_sbu,intech_hrm.group_hr_analytic_dhr"
+              web_icon="hr_timesheet,static/description/icon_timesheet.png"
+    >
+        <menuitem id="hr_timesheet.timesheet_menu_activity_user"
+                  name="My Timesheets"
+                  groups="hr_timesheet.group_hr_timesheet_user"
+                  action="hr_timesheet.act_hr_timesheet_line"
+        />
+        <menuitem id="hr_timesheet.menu_hr_time_tracking"
+                  name="Timesheets"
+                  groups="hr_timesheet.group_hr_timesheet_approver,intech_hrm.group_hr_analytic_leader,intech_hrm.group_hr_analytic_sbu_hr,intech_hrm.group_hr_analytic_manager_sbu,intech_hrm.group_hr_analytic_dhr"
+                  sequence="5"
+        >
+            <menuitem id="hr_timesheet.timesheet_menu_activity_mine"
+                      name="My Timesheets"
+                      groups="hr_timesheet.group_hr_timesheet_approver,intech_hrm.group_hr_analytic_leader,intech_hrm.group_hr_analytic_sbu_hr,intech_hrm.group_hr_analytic_manager_sbu,intech_hrm.group_hr_analytic_dhr"
+                      action="hr_timesheet.act_hr_timesheet_line"
+            />
+            <menuitem id="hr_timesheet.timesheet_menu_activity_all"
+                      name="All Timesheets"
+                      action="hr_timesheet.timesheet_action_all"
+                      groups="hr_timesheet.group_hr_timesheet_approver,intech_hrm.group_hr_analytic_leader,intech_hrm.group_hr_analytic_sbu_hr,intech_hrm.group_hr_analytic_manager_sbu,intech_hrm.group_hr_analytic_dhr"
+            />
+        </menuitem>
+        <menuitem id="hr_timesheet.menu_timesheets_reports"
+                  name="Reporting"
+                  groups="hr_timesheet.group_hr_timesheet_approver,intech_hrm.group_hr_analytic_sbu_hr,intech_hrm.group_hr_analytic_manager_sbu,intech_hrm.group_hr_analytic_dhr"
+                  sequence="99"
+        >
+            <menuitem id="hr_timesheet.menu_timesheets_reports_timesheet"
+                      name="Timesheets"
+                      sequence="10"
+            >
+                <menuitem id="hr_timesheet.menu_hr_activity_analysis"
+                          action="hr_timesheet.act_hr_timesheet_report"
+                          groups="hr_timesheet.group_hr_timesheet_approver,intech_hrm.group_hr_analytic_sbu_hr,intech_hrm.group_hr_analytic_manager_sbu,intech_hrm.group_hr_analytic_dhr"
+                          name="By Employee"
+                          sequence="10"
+                />
+                <menuitem id="hr_timesheet.timesheet_menu_report_timesheet_by_project"
+                          action="hr_timesheet.timesheet_action_report_by_project"
+                          name="By Project"
+                          sequence="15"
+                />
+                <menuitem id="hr_timesheet.timesheet_menu_report_timesheet_by_task"
+                          action="hr_timesheet.timesheet_action_report_by_task"
+                          name="By Task"
+                          sequence="20"
+                />
+            </menuitem>
+        </menuitem>
+    </menuitem>
+
+    <menuitem name="To Validate" id="timesheet_grid.menu_timesheet_grid_validate"
+                  parent="hr_timesheet.timesheet_menu_root"
+                  groups="hr_timesheet.group_hr_timesheet_approver,intech_hrm.group_hr_analytic_sbu_hr,intech_hrm.group_hr_analytic_manager_sbu,intech_hrm.group_hr_analytic_dhr"
+                  sequence="10"/>
+
+    <menuitem id="hr_holidays.hr_holidays_menu_config_activity_type"
+        action="hr_holidays.mail_activity_type_action_config_hr_holidays"
+        parent="hr_holidays.menu_hr_holidays_configuration"
+        groups="base.group_no_one,intech_hrm.group_hr_analytic_sbu_hr,intech_hrm.group_hr_analytic_manager_sbu"/>
 </odoo>

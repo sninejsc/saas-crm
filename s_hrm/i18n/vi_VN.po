@@ -448,7 +448,11 @@ msgid "Display Name"
 msgstr "Tên hiển thị"
 
 #. module: intech_hrm
+#: model:ir.actions.act_window,name:intech_hrm.open_view_my_employee_list
+#: model:res.groups,name:intech_hrm.group_hr_analytic_employee
 #: model:res.groups,name:intech_hrm.group_hr_contract_user_employee
+#: model:res.groups,name:intech_hrm.group_hr_expense_employee
+#: model:res.groups,name:intech_hrm.group_hr_holiday_user
 msgid "Employees"
 msgstr "Nhân viên"
 
@@ -461,6 +465,16 @@ msgstr "Nhân viên"
 #: model:res.groups,name:intech_hrm.group_user_hr_sbu
 msgid "Hr SBU Employees"
 msgstr "Hr SBU"
+
+#. module: intech_hrm
+#: model:res.groups,name:intech_hrm.group_hr_analytic_sbu_hr
+#: model:res.groups,name:intech_hrm.group_hr_attendance_sbu_hr
+#: model:res.groups,name:intech_hrm.group_hr_contract_sbu_hr
+#: model:res.groups,name:intech_hrm.group_hr_expense_hr_sbu
+#: model:res.groups,name:intech_hrm.group_hr_holiday_hr_sbu
+#: model:res.groups,name:intech_hrm.group_user_hr_sbu
+msgid "Hr SBU"
+msgstr "Nhân sự SBU"
 
 #. module: intech_hrm
 #: model:ir.model.fields,field_description:intech_hrm.field_hr_contract_employee__contract_date_end
@@ -535,3 +549,105 @@ msgstr "Đang hoạt động"
 #, python-format
 msgid "Employee code '%s' already exists."
 msgstr "Mã nhân viên '%s' đã tồn tại."
+
+#. module: intech_hrm
+#: model:res.groups,name:intech_hrm.group_hr_expense_finance_sbu
+msgid "Finance SBU"
+msgstr "Tài chính SBU"
+
+#. module: intech_hrm
+#: model:res.groups,name:intech_hrm.group_fleet_leader
+#: model:res.groups,name:intech_hrm.group_hr_analytic_leader
+#: model:res.groups,name:intech_hrm.group_hr_attendance_user_leader
+#: model:res.groups,name:intech_hrm.group_hr_expense_leader
+#: model:res.groups,name:intech_hrm.group_hr_holiday_leader
+#: model:res.groups,name:intech_hrm.group_user_leader
+msgid "Leader"
+msgstr "Quản lý"
+
+
+#. module: intech_hrm
+#. odoo-javascript
+#: code:addons/intech_hrm/static/src/view/import_data_content.xml:0
+#, python-format
+msgid "File Column"
+msgstr "Cột tệp"
+
+#. module: intech_hrm
+#. odoo-javascript
+#: code:addons/intech_hrm/static/src/view/import_data_content.xml:0
+#, python-format
+msgid "Comments"
+msgstr "Bình luận"
+
+#. module: intech_hrm
+#. odoo-javascript
+#: code:addons/intech_hrm/static/src/view/import_data_content.xml:0
+#, python-format
+msgid "SoOn Field"
+msgstr "Trường SoOn"
+
+#. module: intech_hrm
+#: model:res.groups,name:intech_hrm.group_fleet_sbu_manager
+#: model:res.groups,name:intech_hrm.group_hr_analytic_manager_sbu
+#: model:res.groups,name:intech_hrm.group_hr_attendance_manager_sbu
+#: model:res.groups,name:intech_hrm.group_hr_contract_sbu_manager
+#: model:res.groups,name:intech_hrm.group_hr_expense_manager_sbu
+#: model:res.groups,name:intech_hrm.group_hr_holiday_manager_sbu
+#: model:res.groups,name:intech_hrm.group_user_manager_sbu
+msgid "Manager SBU"
+msgstr "Trưởng SBU"
+
+#. module: intech_hrm
+#: model:res.groups,name:intech_hrm.group_hr_attendance_dhr
+#: model:res.groups,name:intech_hrm.group_hr_contract_dhr
+#: model:res.groups,name:intech_hrm.group_hr_expense_dhr
+#: model:res.groups,name:intech_hrm.group_hr_holiday_dhr
+#: model:res.groups,name:intech_hrm.group_user_dhr
+msgid "Hr Group"
+msgstr ""
+
+#. module: intech_hrm
+#: model:ir.actions.act_window,name:intech_hrm.open_view_my_employee_list
+#: model:res.groups,name:intech_hrm.group_hr_contract_user_employee
+#: model:res.groups,name:intech_hrm.group_hr_expense_employee
+#: model:res.groups,name:intech_hrm.group_hr_holiday_user
+msgid "Employees"
+msgstr "Nhân viên"
+
+#. module: intech_hrm
+#: model:ir.ui.menu,name:intech_hrm.hr_menu_my_employee_list
+msgid "Employees My"
+msgstr "Nhân viên của tôi"
+
+#. module: intech_hrm
+#. odoo-python
+#: code:addons/intech_hrm/models/fleet_booking.py:0
+#, python-format
+msgid "Vehicle Booking Approval"
+msgstr "Phê duyệt đặt xe"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.hr_leave_allocation_view_form_manager_inherit
+msgid "Company"
+msgstr "Công ty"
+
+#. module: intech_hrm
+#: model_terms:ir.ui.view,arch_db:intech_hrm.hr_leave_allocation_view_form_manager_inherit
+msgid "Mode"
+msgstr "Phương thức"
+
+#. module: intech_hrm
+#. odoo-python
+#: code:addons/intech_hrm/models/hr_employee.py:0
+#: code:addons/intech_hrm/models/res_users.py:0
+#, python-format
+msgid "You are not allowed to see timesheets."
+msgstr "Bạn không được phép xem bảng chấm công."
+
+#. module: intech_hrm
+#. odoo-javascript
+#: code:addons/intech_hrm/static/src/view/datetime_picker_popover.xml:0
+#, python-format
+msgid "Apply"
+msgstr "Áp dụng"
